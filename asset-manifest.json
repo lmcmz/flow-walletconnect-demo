@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/flow-walletconnect-demo/static/js/main.5866eb08.chunk.js",
+    "main.js.map": "/flow-walletconnect-demo/static/js/main.5866eb08.chunk.js.map",
+    "runtime-main.js": "/flow-walletconnect-demo/static/js/runtime-main.d342c89a.js",
+    "runtime-main.js.map": "/flow-walletconnect-demo/static/js/runtime-main.d342c89a.js.map",
+    "static/js/2.d05fd7f4.chunk.js": "/flow-walletconnect-demo/static/js/2.d05fd7f4.chunk.js",
+    "static/js/2.d05fd7f4.chunk.js.map": "/flow-walletconnect-demo/static/js/2.d05fd7f4.chunk.js.map",
+    "static/js/3.68985256.chunk.js": "/flow-walletconnect-demo/static/js/3.68985256.chunk.js",
+    "static/js/3.68985256.chunk.js.map": "/flow-walletconnect-demo/static/js/3.68985256.chunk.js.map",
+    "index.html": "/flow-walletconnect-demo/index.html",
+    "static/js/2.d05fd7f4.chunk.js.LICENSE.txt": "/flow-walletconnect-demo/static/js/2.d05fd7f4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d342c89a.js",
+    "static/js/2.d05fd7f4.chunk.js",
+    "static/js/main.5866eb08.chunk.js"
+  ]
+}
