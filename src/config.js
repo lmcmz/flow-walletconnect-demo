@@ -1,6 +1,6 @@
 import * as fcl from "@onflow/fcl"
-import {send as httpSend} from "@onflow/transport-http"
-import {send as grpcSend} from "@onflow/transport-grpc"
+import { send as httpSend } from "@onflow/transport-http"
+import { send as grpcSend } from "@onflow/transport-grpc"
 
 const USE_LOCAL = false
 
