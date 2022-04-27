@@ -65,13 +65,31 @@ export default function Root() {
     setClient(client);
   }
 
-  const handleSend = async () => {
-    console.log('<--- handleSend -->');
+  const sendAuthn = async () => {
+    console.log('<--- handle Authn -->');
+    const result = await client.request({
+      topic: session.topic,
+      request: {
+        method: "flow_authn",
+        params: [],
+      },
+    });
+    console.log('<--- result -->', result);
+  }
+
+  const sendAuthz = async () => {
+    console.log('<--- handle Authz -->');
     const result = await client.request({
       topic: session.topic,
       request: {
         method: "flow_authz",
-        params: [],
+        params: [{
+          referenceId: "0x123123123",
+          cadence: "import Crypto",
+          args: [
+            {type: "UInt8", value: "2"}
+          ]
+        }],
       },
     });
     console.log('<--- result -->', result);
@@ -84,7 +102,7 @@ export default function Root() {
       name: "Flow App",
       description: "Flow DApp for WalletConnect",
       url: "https://testFlow.com/",
-      icons: ["https://raw.githubusercontent.com/Outblock/Assets/main/blockchain/flow/info/logo.png"],
+      icons: ["https://avatars.githubusercontent.com/u/62387156?s=280&v=4"],
     };
 
     const session = await client.connect({
@@ -113,7 +131,8 @@ export default function Root() {
       <ul>{COMMANDS.map(renderCommand)}</ul>
       <ul>
         {client && <button onClick={handleWalletConnect}>Wallet Connect</button>}
-        {session && <button onClick={handleSend}>WalletConnect Authz</button>}
+        {session && <button onClick={sendAuthn}>WalletConnect Authn</button>}
+        {session && <button onClick={sendAuthz}>WalletConnect Authz</button>}
       </ul>
       <pre>{session && JSON.stringify({ session }, null, 2)}</pre>
       <pre>{JSON.stringify({ currentUser, config }, null, 2)}</pre>
